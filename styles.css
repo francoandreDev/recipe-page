@@ -640,11 +640,13 @@
                 "ingredients info"
                 "instructions info"
                 "footer footer";
-            justify-items: center;
+            justify-items: end;
+            justify-content: center;
+            row-gap: 1rem;
         }
 
         main > * {
-            margin: 0 15rem;
+            margin: 0 14rem;
         }
 
         .title-recipe {
@@ -662,7 +664,7 @@
 
         img.image-recipe {
             grid-area: image;
-            max-width: calc(100vw - 30rem);
+            max-width: calc(100vw - 28rem);
             margin-top: 1rem;
             margin-bottom: 3rem;
         }
@@ -676,12 +678,12 @@
             height: fit-content;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
+            justify-content: center;
             box-shadow: 0 0 5px 1px rgba(0 0 0 /0.1);
             width: fit-content;
-            padding: 2rem;
+            padding: 1rem 1.5rem;
             border-radius: 12px;
+            gap: 0;
         }
 
         .grid-info-icons > .icon-section {
