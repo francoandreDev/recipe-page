@@ -510,7 +510,8 @@
     }
 
     img.image-recipe {
-        border-radius: 12px;
+        --border-radius-default: 12px;
+        border-radius: var(--border-radius-default);
     }
 
     header.info {
@@ -674,7 +675,8 @@
         }
 
         main > * {
-            margin: 0 14rem;
+            --padding-horizontal: 14rem;
+            margin: 0 var(--padding-horizontal);
         }
 
         .title-recipe {
@@ -706,7 +708,7 @@
             width: fit-content;
             height: fit-content;
             padding: 1rem 1.5rem;
-            border-radius: 12px;
+            border-radius: var(--border-radius-default);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -737,6 +739,8 @@
         article.source {
             grid-area: source;
             font-weight: 100;
+            font-size: 0.9em;
+            letter-spacing: 1px;
             margin: 0;
             padding-top: 1rem;
             width: 100%;
@@ -746,7 +750,7 @@
         }
 
         article.source > h2 {
-            padding-left: 14rem;
+            padding-left: var(--padding-horizontal);
         }
 
         article.source h2.subtitle {
