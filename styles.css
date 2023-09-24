@@ -395,11 +395,11 @@
 
 @layer styles {
     :root {
-        --color-light-default: white;
-        --color-dark-default: black;
-        --color-dark-subtitle: rgb(67, 67, 67);
-        --color-dark-auxiliary: gray;
-        --color-light-auxiliary: white;
+        --color-light-default: hsl(0, 0%, 100%);
+        --color-dark-default: hsl(0, 0%, 0%);
+        --color-dark-subtitle: hsl(0, 0%, 26%);
+        --color-dark-sub-item: hsl(0, 0%, 20%);
+        --color-light-text: hsl(0, 0%, 50%);
     }
 
     ::-webkit-scrollbar {
@@ -418,25 +418,25 @@
     }
 
     body {
-        background-color: black;
+        background-color: var(--color-dark-default);
+        color: var(--color-light-text);
+        font-size: 10px;
         padding: 1px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: var(--color-dark-auxiliary);
-        font-size: 10px;
     }
 
     main {
+        background-color: var(--color-light-default);
+        font-size: 1.4em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         border-radius: 0.5rem;
-        background-color: var(--color-light-default);
         gap: 1rem;
         padding: 1rem;
-        font-size: 1.4em;
     }
 
     main > * {
@@ -455,21 +455,17 @@
 
     #dots {
         grid-area: dots;
+        background: center / contain no-repeat url("./assets/6dots.svg");
         width: 2rem;
         aspect-ratio: 3/1;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url("./assets/6dots.svg");
     }
 
     .title-recipe {
         grid-area: title;
-        margin-top: 0.8em;
-        font-size: 1.8em;
-        font-weight: 700;
+        font: 700 1.8em;
         letter-spacing: 0;
         text-align: left;
+        margin-top: 0.8em;
     }
 
     .description-recipe {
@@ -492,7 +488,7 @@
     h3 {
         font-style: italic;
         font-weight: 400;
-        color: #333333;
+        color: var(--color-dark-sub-item);
     }
 
     [class^="title"] {
@@ -612,7 +608,7 @@
         place-items: center;
     }
 
-    .numbre > .title {
+    .number > .title {
         font-size: 1em;
     }
 
@@ -620,10 +616,41 @@
         grid-area: text;
     }
 
+    article.source {
+        color: var(--color-light-text);
+        font-style: italic;
+        font-size: 0.8em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0.2em;
+        opacity: 0.6;
+    }
+
+    article.source > h2.subtitle {
+        margin: 0;
+        font-weight: 400;
+        font-size: 1.1em;
+    }
+
+    article.source * {
+        color: inherit;
+    }
+
     footer {
+        font-weight: 500;
         display: flex;
         justify-content: center;
         align-items: flex-end;
+    }
+
+    footer,
+    footer a {
+        color: #828282;
+    }
+
+    footer b {
+        font-weight: 700;
     }
 
     @media only screen and (min-width: 970px) {
@@ -639,6 +666,7 @@
                 "image image"
                 "ingredients info"
                 "instructions info"
+                "source info"
                 "footer footer";
             justify-items: end;
             justify-content: center;
@@ -664,9 +692,9 @@
 
         img.image-recipe {
             grid-area: image;
-            max-width: calc(100vw - 28rem);
             margin-top: 1rem;
             margin-bottom: 3rem;
+            max-width: calc(100vw - 28rem);
         }
 
         .ingredients {
@@ -675,15 +703,15 @@
 
         .grid-info-icons {
             grid-area: info;
+            width: fit-content;
             height: fit-content;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            box-shadow: 0 0 5px 1px rgba(0 0 0 /0.1);
-            width: fit-content;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
             gap: 0;
+            box-shadow: 0 0 5px 1px rgba(0 0 0 /0.1);
         }
 
         .grid-info-icons > .icon-section {
@@ -706,8 +734,30 @@
             text-wrap: nowrap;
         }
 
+        article.source {
+            grid-area: source;
+            font-weight: 100;
+            margin: 0;
+            padding-top: 1rem;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+
+        article.source > h2 {
+            padding-left: 14rem;
+        }
+
+        article.source h2.subtitle {
+            font-weight: inherit;
+        }
+
         footer {
             grid-area: footer;
+            margin: auto;
+            display: block;
+            text-align: center;
         }
     }
 }
