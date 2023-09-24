@@ -455,7 +455,7 @@
 
     #dots {
         grid-area: dots;
-        background: center / contain no-repeat url("./assets/6dots.svg");
+        background: center / contain no-repeat url("./assets/svg/6dots-min.svg");
         width: 2rem;
         aspect-ratio: 3/1;
     }
