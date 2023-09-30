@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Summary simple recipe for  a creamy and ultra smooth classic cheesecake recipe!
+  Paired with a buttery graham cracker crust">
+    <meta name="keywords" content="classic cheesecake recipe">
     <title>Recipe Page</title>
     <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="./assets/compressjpeg/devchallenges-min.jpg">
+    <link rel="icon" href="./assets/compress-jpg/dev-challenges-min.jpg">
     <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link
@@ -17,80 +20,93 @@
 <body>
     <main>
         <section class="description">
-            <h1 class="title-recipe">Classic Cheesecake Recipe</h1>
-            <div id="dots"></div>
+            <h1 class="title-recipe" itemprop="title recipe" tabindex="0">Classic Cheesecake Recipe</h1>
+            <div id="dots" itemprop="dots"></div>
             <p class="description-recipe">Look no further for a creamy and ultra smooth classic cheesecake recipe!
                 Paired with a buttery graham cracker crust, no one can deny its simple decadence. For the best results,
                 bake in a water bath.</p>
-        </section><img class="image-recipe" src="./assets/compressjpeg/classic-cheesecake-min.jpg"
-            alt="image of a delicious piece of a classic cheesecake">
-        <article class="info grid-info-icons">
-            <section class="icon-section"><img src="./assets/svg/local_dining_FILL0_wght400_GRAD0_opsz24-min.svg"
-                    alt="Cutlery image" class="icon-info svg-yellow">
+        </section>
+        <img class="image-recipe" src="./assets/compress-jpg/classic-cheesecake-min.jpg" tabindex="0"
+            alt="image of a delicious piece of a classic cheesecake" itemprop="classic cheesecake">
+
+        <article class="info grid-info-icons" itemprop="preview metrics about this recipe" tabindex="0">
+            <section class="icon-section">
+                <img src="./assets/svg/local_dining_FILL0_wght400_GRAD0_opsz24-min.svg" width="24" height="24"
+                    alt="Cutlery image" class="icon-info svg-yellow" itemprop="cutlery">
                 <header class="info">Yields</header>
                 <p class="info">12 servings</p>
             </section>
-            <section class="icon-section"><img src="./assets/svg/schedule_FILL0_wght400_GRAD0_opsz24-min.svg"
-                    alt="Clock image" class="icon-info svg-gray">
+            <section class="icon-section"><img src="./assets/svg/schedule_FILL0_wght400_GRAD0_opsz24-min.svg" width="24"
+                    height="24" alt="Clock image" class="icon-info svg-gray" itemprop="clock">
                 <header class="info">Prep Time</header>
                 <p class="info">45 minutes</p>
             </section>
-            <section class="icon-section"><img src="./assets/svg/schedule_FILL0_wght400_GRAD0_opsz24-min.svg"
-                    alt="Clock image" class="icon-info svg-gray">
+            <section class="icon-section"><img src="./assets/svg/schedule_FILL0_wght400_GRAD0_opsz24-min.svg" width="24"
+                    height="24" alt="Clock image" class="icon-info svg-gray" itemprop="clock">
                 <header class="info">Cook Time</header>
                 <p class="info">1 hour</p>
             </section>
-            <section class="icon-section"><img src="./assets/svg/schedule_FILL0_wght400_GRAD0_opsz24-min.svg"
-                    alt="Clock image" class="icon-info svg-gray">
+            <section class="icon-section"><img src="./assets/svg/schedule_FILL0_wght400_GRAD0_opsz24-min.svg" width="24"
+                    height="24" alt="Clock image" class="icon-info svg-gray" itemprop="clock">
                 <header class="info">Total Time</header>
                 <p class="info">7.75 hours</p>
             </section>
         </article>
-        <article class="ingredients">
-            <h2 class="subtitle">Ingredients</h2>
-            <section class="graham-cracker-crust">
+        <article class="ingredients" itemprop="article about the proportion of each ingredient" tabindex="0">
+            <h2 class="subtitle" itemprop="subtitle ingredients">Ingredients</h2>
+            <section class="graham-cracker-crust" itemprop="section graham-cracker-crust">
                 <h3>Graham Cracker Crust</h3>
-                <div class="list"><input type="checkbox" name="" id="">
+                <div class="list">
+                    <input type="checkbox" name="graham-cracker-crumbs" aria-label="150g graham-cracker-crumbs">
                     <p class="description">1 and 1/2 cups (150g)<b>graham cracker crumbs</b>(about 10 full sheet graham
                         crackers).</p>
                 </div>
-                <div class="list"><input type="checkbox" name="" id="">
+                <div class="list">
+                    <input type="checkbox" name="tablespoons" aria-label="70g tablespoons">
                     <p class="description">5 Tablespoons (70g)<b>unsalted butter</b>, melted.</p>
                 </div>
-                <div class="list"><input type="checkbox" name="" id="">
+                <div class="list">
+                    <input type="checkbox" name="granulated-sugar" aria-label="50g granulated-sugar">
                     <p class="description">1/4 cup (50g)<b>granulated sugar</b>.</p>
                 </div>
             </section>
-            <section class="cheesecake">
-                <h3 class="subtitle">Cheesecake</h3>
-                <div class="list"><input type="checkbox" name="" id="">
+            <section class="cheesecake" itemprop="about cheesecake">
+                <h3 class="subtitle" itemprop="subtitle name">Cheesecake</h3>
+                <div class="list">
+                    <input type="checkbox" name="cream-cheese" aria-label="904g cream cheese">
                     <p class="description">four 8-ounce blocks (904g) full-fat<b>cream cheese</b>, softened to room
                         temperature.</p>
                 </div>
-                <div class="list"><input type="checkbox" name="" id="">
+                <div class="list">
+                    <input type="checkbox" name="granulated-sugar" aria-label="200g granulated sugar">
                     <p class="description">1 cup (200g)<b>granulated sugar</b>.</p>
                 </div>
-                <div class="list"><input type="checkbox" name="" id="">
+                <div class="list">
+                    <input type="checkbox" name="sour-cream" aria-label="240g full-fat sour cream">
                     <p class="description">1 cup (240g) full-fat<b>sour cream</b>, at room temperature.</p>
                 </div>
-                <div class="list"><input type="checkbox" name="" id="">
+                <div class="list">
+                    <input type="checkbox" name="pure-vanilla-extract" aria-label="1 teaspoon pure vanilla extract">
                     <p class="description">1 teaspoon<b>pure vanilla extract</b>.</p>
                 </div>
-                <div class="list"><input type="checkbox" name="" id="">
+                <div class="list">
+                    <input type="checkbox" name="fresh-lemon-juice" aria-label="2 teaspoon fresh-lemon-juice">
                     <p class="description">2 teaspoons<b>fresh lemon juice</b>(optional, but recommended).</p>
                 </div>
-                <div class="list"><input type="checkbox" name="" id="">
+                <div class="list">
+                    <input type="checkbox" name="eggs" aria-label="3 large eggs">
                     <p class="description">3 large<b>eggs</b>, at room temperature.</p>
                 </div>
-                <div class="list"><input type="checkbox" name="" id="">
+                <div class="list">
+                    <input type="checkbox" name="suggestions" aria-label="suggestions">
                     <p class="description">topping suggestions:<b>salted caramel, lemon curd, strawberry topping,
                             chocolate ganache, red wine chocolate ganache, fresh fruit, whipped cream, or raspberry
                             sauce</b>(recipe in notes).</p>
                 </div>
             </section>
         </article>
-        <article class="instructions">
-            <h2 class="subtitle">Instructions</h2>
+        <article class="instructions" itemprop="instructions recipe" tabindex="0">
+            <h2 class="subtitle" itemprop="subtitle instructions recipe">Instructions</h2>
             <div class="list">
                 <div class="number">
                     <p class="title">1</p>
@@ -160,11 +176,14 @@
                     the refrigerator for up to 5 days.</p>
             </div>
         </article>
-        <article class="source">
-            <h2 class="subtitle">Source:</h2><a
-                href="https://sallysbakingaddiction.com/classic-cheesecake/">https://sallysbakingaddiction.com/classic-cheesecake/</a>
+        <article class="source" tabindex="0">
+            <h2 class="subtitle" itemprop="subtitle link original recipe" aria-label="Source:">Source:</h2><a
+                href="https://sallysbakingaddiction.com/classic-cheesecake/" target="_blank" rel="external nofollow"
+                aria-label="link to source recipe"
+                itemref="full original recipe">https://sallysbakingaddiction.com/classic-cheesecake/</a>
         </article>
-        <footer><span>created by<b><a href="https://github.com/francoandreDev">francoandre.dev</a></b>-
+        <footer><span tabindex="0">created by<b><a href="https://github.com/francoandreDev" target="_blank"
+                        rel="external nofollow" itemref="link github owner">francoandre.dev</a></b>-
                 devChallenges.io</span></footer>
     </main>
 </body>
