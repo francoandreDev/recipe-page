@@ -283,7 +283,7 @@
     #image-cheesecake {
         display: none;
     }
-    #image-cheesecake img {
+    #image-cheesecake + img {
         display: block;
     }
     header.info {
